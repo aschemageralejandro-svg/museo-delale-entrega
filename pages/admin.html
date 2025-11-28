@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Colección - Museo DelAle</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <div class="title-container">
+                    <img src="../img/logo.png" alt="Logo del Museo DelAle" class="logo">
+                    <h1>Museo DelAle</h1>
+                    <p>Panel de administración de la colección</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#contacto">Contacto</a>
+        <a href="../pages/coleccion.html">Colección</a>
+        <a href="admin.html" class="active">Administración</a>
+        <a href="#" id="btnLogout" style="display: none; background-color: var(--redwood);">Cerrar Sesión</a>
+    </nav>
+
+    <main>
+        <!-- Sección de Login (Visible por defecto si no hay sesión) -->
+        <section id="seccion-login" class="contacto">
+            <h2>Iniciar Sesión</h2>
+            <p class="subtit-contacto">Ingresa tus credenciales para acceder al panel.</p>
+
+            <!-- Tarjeta con credenciales de prueba -->
+            <div
+                style="background: rgba(255, 255, 255, 0.95); padding: 1rem; border-radius: 10px; max-width: 400px; margin: 0 auto 1.5rem auto; border-left: 4px solid var(--sandy);">
+                <p style="margin: 0; color: var(--van-dyke); font-size: 0.9rem; text-align: center;">
+                    <strong>📋 Credenciales de prueba:</strong><br>
+                    Usuario: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">admin</code><br>
+                    Contraseña: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">1234</code>
+                </p>
+            </div>
+
+            <div class="form-container">
+                <form class="formulario" id="loginForm">
+                    <input type="text" id="username" placeholder="Usuario" required>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-enviar">Ingresar</button>
+                    <p id="mensaje-error" style="color: red; display: none; margin-top: 1rem;">Usuario o contraseña
+                        incorrectos.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de Administración (Oculta por defecto) -->
+        <section id="seccion-admin" class="coleccion-vacia" style="display: none;">
+            <h2>Panel de Administración</h2>
+            <p>Bienvenido, administrador. Aquí podrás gestionar la colección.</p>
+
+            <!-- Lista de obras existentes -->
+            <div class="admin-obras-lista" style="margin-top: 2rem;">
+                <h3>Obras Cargadas</h3>
+                <div id="lista-obras-admin">
+                    <!-- Las obras se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Formulario para agregar nueva obra -->
+            <div class="form-container" style="margin-top: 3rem;">
+                <h3>Agregar Nueva Obra</h3>
+                <form class="formulario" id="form-agregar-obra">
+                    <input type="text" id="titulo" placeholder="Título de la obra" required>
+                    <input type="text" id="artista" placeholder="Artista" required>
+                    <input type="number" id="anio" placeholder="Año" required>
+                    <input type="text" id="tecnica" placeholder="Técnica (ej: Óleo sobre tela)" required>
+                    <input type="text" id="dimensiones" placeholder="Dimensiones (ej: 100 x 80 cm)" required>
+                    <input type="text" id="imagen" placeholder="URL de la imagen" required>
+                    <textarea id="descripcion" placeholder="Descripción de la obra" rows="4" required></textarea>
+                    <button type="submit" class="btn-enviar">Guardar Obra</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Museo DelAle - Todos los derechos reservados</p>
+            </div>
+
+            <div class="footer-redes">
+                <h4>Seguinos en redes sociales</h4>
+                <div class="redes-icons">
+                    <a href="https://www.instagram.com/" target="_blank" class="red-social">
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="red-social">
+                        <i class="fab fa-facebook fa-2x"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="red-social">
+                        <i class="fab fa-twitter fa-2x"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/db.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

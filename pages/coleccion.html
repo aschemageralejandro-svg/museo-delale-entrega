@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección - Museo DelAle</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <div class="title-container">
+                    <img src="../img/logo.png" alt="Logo del Museo DelAle" class="logo">
+                    <h1>Museo DelAle</h1>
+                    <p>Explora nuestra colección de arte argentino</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html#contacto">Contacto</a>
+        <a href="coleccion.html" class="active">Colección</a>
+        <a href="admin.html">Administración</a>
+    </nav>
+
+    <main>
+        <section class="obras-container">
+            <h2>Nuestra Colección de Arte Argentino</h2>
+            <p class="intro-obras">Explora las obras más destacadas de nuestra colección permanente de pinturas
+                argentinas.</p>
+
+            <!-- Contenedor vacío donde se inyectarán las obras con JS -->
+            <div class="obras-lista" id="contenedor-obras">
+                <!-- Las obras se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Museo DelAle - Todos los derechos reservados</p>
+            </div>
+
+            <div class="footer-redes">
+                <h4>Seguinos en redes sociales</h4>
+                <div class="redes-icons">
+                    <a href="https://www.instagram.com/" target="_blank" class="red-social">
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="red-social">
+                        <i class="fab fa-facebook fa-2x"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="red-social">
+                        <i class="fab fa-twitter fa-2x"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts para cargar obras -->
+    <script src="../js/db.js"></script>
+    <script src="../js/coleccion.js"></script>
+</body>
+
+</html>
